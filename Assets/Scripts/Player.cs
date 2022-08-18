@@ -84,7 +84,7 @@ public class Player : MonoBehaviour
 
         foreach (var hit in hits)
         {
-            hit.collider.GetComponent<Enemy>().TakeDamage(damage);
+            hit.collider.GetComponent<Enemy>()?.TakeDamage(damage);
         }
         
     }
