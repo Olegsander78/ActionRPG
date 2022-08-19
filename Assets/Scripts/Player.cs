@@ -87,6 +87,9 @@ public class Player : MonoBehaviour
     public void TakeDamage(int damageToTake)
     {
         curHP -= damageToTake;
+
+        HealthBarUI.instance.UpdateFill(curHP, maxHP);
+
         if (curHP <= 0)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
